@@ -14,23 +14,20 @@
  *
  */
 
-package org.apache.flume.plugins.test;
+package esun.org.apache.flume.plugins.test;
 
-import com.google.common.base.Preconditions;
 import kafka.javaapi.producer.Producer;
 import kafka.producer.KeyedMessage;
 import kafka.producer.ProducerConfig;
-import org.apache.commons.lang.StringUtils;
 import org.apache.flume.*;
 import org.apache.flume.channel.ChannelProcessor;
 import org.apache.flume.channel.MemoryChannel;
-import org.apache.flume.channel.PseudoTxnMemoryChannel;
 import org.apache.flume.channel.ReplicatingChannelSelector;
 import org.apache.flume.conf.Configurables;
 import org.apache.flume.lifecycle.LifecycleException;
-import org.apache.flume.plugins.KafkaFlumeConstans;
-import org.apache.flume.plugins.KafkaSink;
-import org.apache.flume.plugins.KafkaSource;
+import esun.org.apache.flume.plugins.KafkaFlumeConstans;
+import esun.org.apache.flume.plugins.KafkaSink;
+import esun.org.apache.flume.plugins.KafkaSource;
 import org.apache.flume.source.AbstractSource;
 import org.junit.Before;
 import org.junit.Test;

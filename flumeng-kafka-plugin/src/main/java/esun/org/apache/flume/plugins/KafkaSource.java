@@ -14,10 +14,9 @@
  *
  */
 
-package org.apache.flume.plugins;
+package esun.org.apache.flume.plugins;
 
 import java.lang.management.ManagementFactory;
-import java.nio.charset.Charset;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;

@@ -14,7 +14,7 @@
  *
  */
 
-package org.apache.flume.plugins;
+package esun.org.apache.flume.plugins;
 
 /**
  * Flume Kafka Constans.
@@ -32,6 +32,11 @@ public class KafkaFlumeConstans {
      * The constant ENCODING_KEY_NAME.
      */
     public static final String ENCODING_KEY_NAME = "custom.encoding";
+
+    /**
+     * this constant includeHeader
+     * */
+    public static final String INCLUDE_HEADER = "custom.include.header";
     /**
      * The constant DEFAULT_ENCODING.
      */

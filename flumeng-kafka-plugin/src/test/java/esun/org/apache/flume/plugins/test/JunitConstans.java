@@ -14,7 +14,7 @@
  *
  */
 
-package org.apache.flume.plugins.test;
+package esun.org.apache.flume.plugins.test;
 
 /**
  * define constans for junit.

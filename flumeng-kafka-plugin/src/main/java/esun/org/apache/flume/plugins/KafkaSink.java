@@ -14,7 +14,7 @@
  *
  */
 
-package org.apache.flume.plugins;
+package esun.org.apache.flume.plugins;
 
 /**
  * KAFKA Flume Sink (Kafka 0.8 Beta, Flume 1.4).
@@ -23,11 +23,16 @@ package org.apache.flume.plugins;
  * Time: PM 4:32
  */
 
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Map;
 import java.util.Properties;
+
 
 import kafka.javaapi.producer.Producer;
 import kafka.producer.KeyedMessage;
 import kafka.producer.ProducerConfig;
+
 
 import org.apache.commons.lang.StringUtils;
 import org.apache.flume.*;
@@ -123,7 +128,20 @@ public class KafkaSink extends AbstractSink implements Configurable {
                     "custom.topic.name is required");
 
             String eventData = new String(event.getBody(), encoding);
+            String includeHeader = this.parameters.getProperty(KafkaFlumeConstans.INCLUDE_HEADER, "true");
+            if("true".equals(includeHeader)) {
+                String header = "";
+                Map<String, String> headerMap = event.getHeaders();
+                if(headerMap != null) {
+                    for(Map.Entry<String, String> entry : headerMap.entrySet()) {
 
+                        header += String.format("%s:%s,", entry.getKey(), entry.getValue());
+                    }
+
+                    header = header.substring(0, Math.max(0, header.length() -1));
+                }
+                eventData = String.format("%s<fh[%s]>",eventData, header);
+            }
             KeyedMessage<String, String> data;
 
             // if partition key does'nt exist

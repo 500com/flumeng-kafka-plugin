@@ -8,7 +8,7 @@
 
     <!-- ARTIFACT SECTION -->
     <modelVersion>4.0.0</modelVersion>
-    <artifactId>flumeng-kafka-plugin</artifactId>
+    <artifactId>esun-flumeng-kafka-plugin</artifactId>
     <packaging>jar</packaging>
     <name>flumeng-kafka-plugin</name>
 

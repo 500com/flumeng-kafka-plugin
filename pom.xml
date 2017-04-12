@@ -60,7 +60,7 @@
         <maven.dependency>2.8</maven.dependency>
 
         <!-- flume -->
-        <flume>1.4.0</flume>
+        <flume>1.5.0</flume>
 
         <!-- log -->
         <slf4j>1.6.1</slf4j>

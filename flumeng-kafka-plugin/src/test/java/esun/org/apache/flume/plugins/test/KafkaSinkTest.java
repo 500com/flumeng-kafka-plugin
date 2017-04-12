@@ -14,7 +14,7 @@
  *
  */
 
-package org.apache.flume.plugins.test;
+package esun.org.apache.flume.plugins.test;
 
 import org.apache.flume.Channel;
 import org.apache.flume.Context;
@@ -24,8 +24,8 @@ import org.apache.flume.channel.PseudoTxnMemoryChannel;
 import org.apache.flume.conf.Configurables;
 import org.apache.flume.event.SimpleEvent;
 import org.apache.flume.lifecycle.LifecycleException;
-import org.apache.flume.plugins.KafkaFlumeConstans;
-import org.apache.flume.plugins.KafkaSink;
+import esun.org.apache.flume.plugins.KafkaFlumeConstans;
+import esun.org.apache.flume.plugins.KafkaSink;
 import org.junit.Before;
 import org.junit.Test;
 import org.slf4j.Logger;
